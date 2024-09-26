@@ -1,0 +1,22 @@
+name: Manual Trigger on Feature Branch
+
+on:
+ workflow_dispatch:
+   inputs:
+     branch-name:
+       description: 'bvhjbvghdf'
+       required: true
+       default: 'feature/*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run your build or script
+        run: |
+          echo "Running pipeline for feature branch..."
+          # Add your build commands here
