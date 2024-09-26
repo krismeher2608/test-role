@@ -1,12 +1,9 @@
 name: Manual Trigger on Feature Branch
 
 on:
- workflow_dispatch:
-   inputs:
-     branch-name: # Allows manual trigger
-       description: 'jbdvudbvuhdf'
-       required: true
-       default: 'master'
+ push:
+   branches:
+     - master
 
 jobs:
   build:
